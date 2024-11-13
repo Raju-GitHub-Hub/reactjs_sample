@@ -1,16 +1,13 @@
+import React from 'react'
+import Pracitice from './Practice'
 
-import './App.css';
-
-
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Hello Hakeem Bhai!!</h1>
+    <div>
+      <h1>hwguyw</h1>
+      <Pracitice />
     </div>
-  );
+  )
 }
 
-export default App;
-
-
-
+export default App
