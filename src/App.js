@@ -1,16 +1,38 @@
-
-import './App.css';
-
+import React, { useState } from 'react'
 
 function App() {
+
+  const [data, setData] = useState({
+    username: '',
+    password: '',
+  })
+  const {username,password} = data;
+  const onChange = e => {
+    setData({...data,[e.target.name]:[e.target.value]})
+  }
+
+  const submitHandler = e => {
+    e.preventDefault();
+    console.log(data);
+    // axios.post('',data);
+  }
+
   return (
-    <div className="App">
-      <h1>Hello Hakeem Bhai!!</h1>
+    <div>
+      <center>
+        <form onSubmit={submitHandler}>
+          <input type="text" name="username" value={username}
+            onChange={onChange} placeholder="username" /> <br/>
+
+          <input type="password" name="password" value={password}
+            onChange={onChange} placeholder="password" /> <br/>
+
+          <input type="submit" name="submit" />
+
+        </form>
+      </center>
     </div>
-  );
+  )
 }
 
-export default App;
-
-
-
+export default App
