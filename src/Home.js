@@ -1,30 +1,33 @@
-import React, { useState } from 'react'
+// import React, {useEffect, useState} from 'react';
+// import axios from 'axios';
+// import { response } from 'express';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-    const [data, setData] = useState({
-        usdrname: '',
-        password: '',
-    })
-    const {username,password} = data;
-    const changeHandler = e => {
-        setData({...data,[e.target.name]:[e.target.value]})
-    }
-    const submitHandler = e => {
-        e.preventDefault()
-        console.log(data)
-    }
-    return (
-        <div>
-            <center>
-                <h1>Sample Login Form</h1> <br/>
-                <form>
-                    <input type="text" name="username" value={username} onChange={changeHandler} />  <br/>
-                    <input type='password' name='password' value={password} onChange={changeHandler} /><br/>
-                    <input type='submit' name='submit' onSubmit={submitHandler} />
-                </form>
-            </center>
-        </div>
-    )
+  // const [data, setData] = useState([]);
+
+// useEffect(()=>{
+//   axios.get("https://jsonplaceholder.typicode.com/todos").then(
+//     response => setData(response.data)
+//   )
+// },[])
+
+  return (
+    <div>
+      <center>
+      <ul>
+        <Link to="/"><li> Home </li></Link>
+        <Link to="/Navbar"><li> Navbar </li></Link>
+        <Link to="/footer"><li> Footer </li></Link>
+        <Link to="/header" ><li>Header</li></Link>
+      </ul>
+       {/* {data.map(item => <li key={item.id} >{item.title}</li> )} */}
+       
+      </center>
+    </div>
+  )
 }
 
-export default Home
+// laboriosam mollitia et enim quasi adipisci quia provident illum
+
+export default Home;

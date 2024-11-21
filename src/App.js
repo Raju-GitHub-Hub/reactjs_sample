@@ -1,48 +1,37 @@
 // import React, { useState } from 'react'
 // import Header from './Header';
-import Home from './Home';
+// import Home from './Home';
 // import Footer from './Footer';
-
+// import Calculater from "./Calculater";
+import Footer from "./Footer"
+import Header from "./Header"
+import Home from "./Home"
+import Navbar from "./Navbar"
+import { BrowserRouter,Route,Routes } from "react-router-dom"
 
 
 
 
 function App() {
 
-  // const [data, setData] = useState({
-  //   username: '',
-  //   password: '',
-  // })
-  // const {username,password} = data;
-  // const onChange = e => {
-  //   setData({...data,[e.target.name]:[e.target.value]})
-  // }
-
-  // const submitHandler = e => {
-  //   e.preventDefault();
-  //   console.log(data);
-  // }
-
   return (
     <div>
-
-      {/* <Header /> */}
+      <BrowserRouter>
       <Home />
-      {/* <Footer /> */}
-      {/* <center>
-        <form onSubmit={submitHandler}>
-          <input type="text" name="username" value={username}
-            onChange={onChange} placeholder="username" /> <br/>
-
-          <input type="password" name="password" value={password}
-            onChange={onChange} placeholder="password" /> <br/>
-
-          <input type="submit" name="submit" />
-
-        </form>
-      </center> */}
+      <Routes>
+        {/* <Route path="/" exact Component={Home} /> */}
+        <Route path="navbar" exact Component={Navbar} />
+        <Route path="footer" exact Component={Footer} />
+        <Route path="header" exact Component={Header} />
+      </Routes>
+      </BrowserRouter>
+     
+      {/* <Home /> */}
     </div>
   )
 }
 
 export default App
+
+
+// 1800-2222-44 or 1800-208-2244  customercare@unionbankofindia.bank.
